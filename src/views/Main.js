@@ -37,7 +37,7 @@ function MainView({language}) {
   if(isError) {
     return <div style={{display:'grid',justifyContent:'center',alignItems:'center',height:'100vh',width:'100vw'}}>
     <div style={{ position: 'absolute', zIndex: '1' ,left:'18vw',fontSize:'2vw',fontFamily:'cursive',color:'#00E5D7',transform: 'rotate(-45deg)'}}>Something  Went  Wrong</div>
-    <img width='100%' height='100%' src={NotFound} ></img>
+    <img alt='404' width='100%' height='100%' src={NotFound} ></img>
     </div>
   }
       

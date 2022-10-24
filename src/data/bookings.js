@@ -6,6 +6,7 @@ export const getBookings =  async () => {
     bookings.map((booking) => {
         booking.start = new Date(booking.start)
         booking.end = new Date(booking.end)
+        return booking;
       })
       
     return bookings;

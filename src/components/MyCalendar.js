@@ -5,7 +5,7 @@ import { LanguageContext } from './Header'
 import 'moment/locale/fi'
 
 export const MyCalendar = ({bookings,...props}) => {
-    const [language,setLanguage] = React.useContext(LanguageContext)
+    const [language] = React.useContext(LanguageContext)
     const [view, setView] = useState(Views.MONTH)
    
     const onView = useCallback((newView) => setView(newView), [setView])
