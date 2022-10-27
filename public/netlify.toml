@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/reservations room=:room"
-  to = "https://tilat.lab.fi/getReservations.php
+  to = "https://tilat.lab.fi/getReservations.php"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
