@@ -155,7 +155,7 @@ if (choice) return <MainView />
               building && <ListRooms />
             }
             </select>
-            {room?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
+            {room!==0?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
             </>
     </div>
     
