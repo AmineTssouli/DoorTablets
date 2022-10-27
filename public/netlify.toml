@@ -1,9 +1,15 @@
 [[redirects]]
-  from = "/reservations"
-  to = "https://tilat.lab.fi/getReservations.php?room=2305"
+  from = "/reservations room=:room"
+  to = "https://tilat.lab.fi/getReservations.php
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/buildings building=:building"
+  to = "https://tilat.lab.fi/getRooms.php"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}  
 [[headers]]
   for = "/*"
   [headers.values]
