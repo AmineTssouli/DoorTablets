@@ -8,7 +8,7 @@ const queryClient = new QueryClient()
 
 export const Main = () => {
   const [language,setLanguage] = useState('en');
-  const [room,setRoom]= useState(null);
+  
   return (
   <QueryClientProvider client={queryClient}>
     <LanguageContext.Provider value={[language,setLanguage]}>

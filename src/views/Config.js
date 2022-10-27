@@ -37,7 +37,7 @@ export const Config = ({language}) => {
   const getRooms = useMemo(async ()=> {
       setRooms([])
       setRoom(0)
-       if(building != 0 || building ==="00000") {
+       if(building !== 0 || building ==="00000") {
         
       const response = await axios.get("/buildings?building="+building);
       const rms = await response.data;
@@ -52,7 +52,8 @@ export const Config = ({language}) => {
 
  const handleOnChange = (event)=>{
   setBuilding(event.target.value); 
-  let hh= getRooms; 
+  let hh= getRooms;
+  console.log(hh) 
 
  }
   const ListRooms =  ()=> {
@@ -74,11 +75,6 @@ export const Config = ({language}) => {
   )
   };
   
-  function validate (rm) {
-      console.log('from rm',rm.id)
-      console.log('from room',room)
-      return rm.id === room
-    }
 
   
 
@@ -118,7 +114,7 @@ export const Config = ({language}) => {
           <div style={{marginTop:70,height:400,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
             <div style={{borderRadius:10,borderStyle:'double',width:150,height:150,backgroundColor:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
               <div >
-                <span style={{fontFamily:'cursive',fontSize:25,fontFamicolor:'black',fontWeight:900}}>{room!=0?room:''}</span>
+                <span style={{fontFamily:'cursive',fontSize:25,fontFamicolor:'black',fontWeight:900}}>{room!==0?room:''}</span>
                   <hr style={{marginBottom:15,marginTop:15,backgroundColor:'#00C2E5'}}/>
                   {
                     data['happening']===1?
