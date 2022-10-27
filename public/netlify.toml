@@ -1,12 +1,12 @@
 [[redirects]]
   from = "/reservations?room=:room"
-  to = "https://tilat.lab.fi/getReservations.php"
+  to = "https://tilat.lab.fi/getReservations.php?room=:room"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
 [[redirects]]
   from = "/buildings?building=:building"
-  to = "https://tilat.lab.fi/getRooms.php"
+  to = "https://tilat.lab.fi/getRooms.php?building=:building"
   status = 200
   force = true
   headers = {X-From = "Netlify"}  
