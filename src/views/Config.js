@@ -152,10 +152,11 @@ if (choice) return <MainView />
             <select style={{width:230}} value={room} onChange={(event)=> {setRoom(event.target.value)}} id="rooms">
             <option defaultValue value={0} >{language === 'en'?'Choose a room:':'Valitse tila'}</option>
             {
+              
               building && <ListRooms />
             }
             </select>
-            {room!==0?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
+            {parsInt(room) !== 0?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
             </>
     </div>
     
