@@ -153,10 +153,11 @@ if (choice) return <MainView />
             <option defaultValue value={0} >{language === 'en'?'Choose a room:':'Valitse tila'}</option>
             {
               
+              
               building && <ListRooms />
             }
             </select>
-            {parsInt(room) !== 0?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
+            {parseInt(room) !== 0?<input onClick={getRoom} style={{cursor:'pointer',backgroundColor:'white',borderRadius:10,fontSize:18,marginLeft:40,width:80}}type={'button'} value={'show'} />:''}
             </>
     </div>
     
