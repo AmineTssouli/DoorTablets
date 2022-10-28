@@ -63,7 +63,7 @@ export const Config = ({language}) => {
     const r = room;
      return (
       rooms.map((room,key)=>{
-        return <option style={{color:r===building.id?'#00E5D7':'black',fontWeight:500}} key={key} value={room.id}>{room.value}</option>
+        return <option style={{color:r===room.id?'#00E5D7':'black',fontWeight:500}} key={key} value={room.id}>{room.value}</option>
       })
     )
     
