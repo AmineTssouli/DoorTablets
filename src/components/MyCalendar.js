@@ -66,7 +66,7 @@ export const MyCalendar = ({bookings,...props}) => {
   
       onView={onView}
       view={view}
-      style={{borderRadius:20,borderBottomLeftRadius:10,borderBottomRightRadius:10,overflow:'hidden',height:400,backgroundColor:'white',marginTop:70,marginBottom:70}}
+      style={{borderRadius:20,borderBottomLeftRadius:10,borderBottomRightRadius:10,overflow:'hidden',height:600,backgroundColor:'white',marginTop:70,marginBottom:70}}
       views={[
         'month',
         'week',
