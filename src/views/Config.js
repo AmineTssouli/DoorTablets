@@ -142,15 +142,15 @@ if (choice) return <MainView />
        <>
             
            <label style={{marginRight:20,marginLeft:20,fontWeight:900}} >{language ==='en'?'Building:':'Rakennus'}</label>
-            <select tyle={{width:230}} value={building} onChange={handleOnChange} id="buildings">
-            <option  defaultValue value={0} >{language === 'en'?'Choose a building:':'Valitse rakennus'}</option>
+            <select style={{width:230,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={building} onChange={handleOnChange} id="buildings">
+            <option  defaultValue value={0} >{language === 'en'?'Choose a building':'Valitse rakennus'}</option>
             
             <ListBuildings />
           
             </select> 
             <label style={{marginRight:20,marginLeft:20,fontWeight:900}} > {language === 'en'?'Room:':'Tila'}</label>
-            <select style={{width:230}} value={room} onChange={(event)=> {setRoom(event.target.value)}} id="rooms">
-            <option defaultValue value={0} >{language === 'en'?'Choose a room:':'Valitse tila'}</option>
+            <select  style={{width:300,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={room} onChange={(event)=> {setRoom(event.target.value)}} id="rooms">
+            <option defaultValue value={0} >{language === 'en'?'Choose a room':'Valitse tila'}</option>
             {
               
               
