@@ -12,6 +12,7 @@ export const Config = ({language}) => {
   const [rooms,setRooms] =useState([])
   const [room,setRoom] = useState(0);
   const [choice,setChoice]=useState(false);
+
   const buildings = [
   {id:"46287",value:"Mukkulankatu 19 A 1. krs" },
   {id:"46288",value:"Mukkulankatu 19 A 2. krs" },
@@ -51,15 +52,18 @@ export const Config = ({language}) => {
   },[building]);
 
  const handleOnChange = (event)=>{
-  setBuilding(event.target.value); 
+  
+  setBuilding(event.target.value);
   let hh= getRooms;
   console.log(hh) 
 
  }
+
   const ListRooms =  ()=> {
+    const r = room;
      return (
       rooms.map((room,key)=>{
-        return <option key={key} value={room.id}>{room.value}</option>
+        return <option style={{color:r===building.id?'#00E5D7':'black',fontWeight:500}} key={key} value={room.id}>{room.value}</option>
       })
     )
     
@@ -67,10 +71,11 @@ export const Config = ({language}) => {
   };
 
   const ListBuildings = () => {
+    const b = building;
     return (
 
     buildings.map((building,key)=>{
-      return <option key={key} value={building.id}>{building.value}</option>
+      return <option style={{color:b===building.id?'#00E5D7':'black',fontWeight:500}}  key={key} value={building.id}>{building.value}</option>
     })
   )
   };
@@ -114,7 +119,7 @@ export const Config = ({language}) => {
           <div style={{marginTop:70,height:400,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
             <div style={{borderRadius:10,borderStyle:'double',width:150,height:150,backgroundColor:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
               <div >
-                <span style={{fontFamily:'cursive',fontSize:25,fontFamicolor:'black',fontWeight:900}}>{room!==0?room:''}</span>
+                <span style={{fontFamily:'cursive',fontSize:25,color:'black',fontWeight:900}}>{room!==0?room:''}</span>
                   <hr style={{marginBottom:15,marginTop:15,backgroundColor:'#00C2E5'}}/>
                   {
                     data['happening']===1?
@@ -142,15 +147,15 @@ if (choice) return <MainView />
        <>
             
            <label style={{marginRight:20,marginLeft:20,fontWeight:900}} >{language ==='en'?'Building:':'Rakennus'}</label>
-            <select style={{width:230,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={building} onChange={handleOnChange} id="buildings">
+            <select style={{fontFamily:'monospace',width:230,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={building} onChange={handleOnChange} id="buildings">
             <option  defaultValue value={0} >{language === 'en'?'Choose a building':'Valitse rakennus'}</option>
             
             <ListBuildings />
           
             </select> 
             <label style={{marginRight:20,marginLeft:20,fontWeight:900}} > {language === 'en'?'Room:':'Tila'}</label>
-            <select  style={{width:300,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={room} onChange={(event)=> {setRoom(event.target.value)}} id="rooms">
-            <option defaultValue value={0} >{language === 'en'?'Choose a room':'Valitse tila'}</option>
+            <select   style={{fontFamily:'monospace',width:300,height:25,borderColor:'black',borderRadius:10,textAlign:'center',border:'solid'}} value={room} onChange={(event)=> {setRoom(event.target.value)}} id="rooms">
+            <option  defaultValue value={0} >{language === 'en'?'Choose a room':'Valitse tila'}</option>
             {
               
               
