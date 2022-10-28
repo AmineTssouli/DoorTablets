@@ -116,7 +116,7 @@ export const Config = ({language}) => {
         
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
           <MyCalendar bookings={data} />
-          <div style={{marginTop:70,height:400,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
+          <div style={{marginTop:70,height:600,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
             <div style={{borderRadius:10,borderStyle:'double',width:150,height:150,backgroundColor:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
               <div >
                 <span style={{fontFamily:'cursive',fontSize:25,color:'black',fontWeight:900}}>{room!==0?room:''}</span>

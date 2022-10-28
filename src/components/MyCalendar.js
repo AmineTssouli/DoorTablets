@@ -76,7 +76,7 @@ export const MyCalendar = ({bookings,...props}) => {
       min={new Date(1972, 0, 1, 8, 0, 0, 0)}
       max={new Date(1972, 0, 1, 19, 0, 0, 0)}
         
-        onSelectEvent={(event)=>console.log(event)}
+        onSelectEvent={(event)=>alert(event)}
      
     />
     
