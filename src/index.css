@@ -6,7 +6,11 @@
   font-weight: 400;
   padding:0;
   margin:0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
+
 
 :root {
   --backgroud-color: #00E5D7;
