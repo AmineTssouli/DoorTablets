@@ -120,7 +120,7 @@ export const Config = ({language}) => {
                 <span style={{fontFamily:'cursive',fontSize:25,color:'black',fontWeight:900}}>{room!==0?room:''}</span>
                   <hr style={{marginBottom:15,marginTop:15,backgroundColor:'#00C2E5'}}/>
                   {
-                    data['happening']===1?
+                    data['happening']?
                     <span style={{fontFamily:'cursive',fontSize:25,color:'red',fontWeight:900}}>{language === 'en'?'Reserved':'Varattu'}</span>
                     :<span style={{fontFamily:'cursive',fontSize:25,color:'green',fontWeight:900}}>{language === 'en'?'Free':'Vapaa'}</span>
                   }
