@@ -12,17 +12,15 @@ export const getBookings =  async (room) => {
         let now = new Date();
         if(test === 0) {
           if (booking.start <= now && booking.end > now){
-            happening = 1
+            happening = 1;
             test=1;
           }
-
         }
         
       
         return booking;
       })
-      
-      console.log('test ', test)
+
       bookings['happening'] = happening;
       
     return bookings;
