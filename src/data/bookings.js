@@ -10,8 +10,8 @@ export const getBookings =  async (room) => {
         booking.start = new Date(booking.start)
         booking.end = new Date(booking.end)
         let now = new Date();
-        (booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())? happening = 1:happening = 0;
-        test =(booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())
+        (booking.start <= now && booking.end > now)? happening = 1:happening = 0;
+        test =(booking.start <= now && booking.end > now)
         return booking;
       })
       

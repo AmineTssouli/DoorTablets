@@ -55,8 +55,6 @@ export const Config = ({language}) => {
   
   setBuilding(event.target.value);
   let hh= getRooms;
-  console.log(hh) 
-
  }
 
   const ListRooms =  ()=> {
