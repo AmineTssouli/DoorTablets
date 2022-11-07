@@ -89,7 +89,7 @@ export const Config = ({language}) => {
   }
   
   function MainView() {
-    const {isError, isLoading, data:data,happening} = useQuery(
+    const {isError, isLoading, data:bookings,happening} = useQuery(
       ["bookings",room],
       ()=>getBookings(room),
       {staleTime:6000}
@@ -114,7 +114,7 @@ export const Config = ({language}) => {
       <div style={{ overflow: 'hidden'}}>
         
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
-          <MyCalendar bookings={data} />
+          <MyCalendar bookings={bookings} />
           <div style={{marginTop:70,height:600,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
             <div style={{borderRadius:10,borderStyle:'double',width:150,height:150,backgroundColor:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
               <div >
