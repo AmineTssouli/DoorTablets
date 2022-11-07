@@ -54,7 +54,7 @@ export const Config = ({language}) => {
  const handleOnChange = (event)=>{
   
   setBuilding(event.target.value);
-  getRooms;
+  getRooms();
  }
 
   const ListRooms =  ()=> {
