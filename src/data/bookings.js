@@ -10,8 +10,10 @@ export const getBookings =  async (room) => {
         booking.end = new Date(booking.end)
         let now = new Date();
         (booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())? happening =1:happening=0;
+      
         return booking;
       })
+      console.log('happening ', happening)
       bookings['happening'] = happening;
       
     return bookings;
