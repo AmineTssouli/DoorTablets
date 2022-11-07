@@ -12,6 +12,7 @@ export const Config = ({language}) => {
   const [rooms,setRooms] =useState([])
   const [room,setRoom] = useState(0);
   const [choice,setChoice]=useState(false);
+  const [happening,SetHappening] = useState(false);
 
   const buildings = [
   {id:"46287",value:"Mukkulankatu 19 A 1. krs" },
@@ -89,12 +90,14 @@ export const Config = ({language}) => {
   }
   
   function MainView() {
-    const {isError, isLoading, data:[bookings,happening]} = useQuery(
+    const {isError, isLoading, data} = useQuery(
       ["bookings",room],
       ()=>getBookings(room),
       {staleTime:6000}
       );
- 
+    SetHappening(data?.happening);
+    console.log(data?.happening);
+    console.log(happening);
   
     if(isLoading) {
       return <LoadingSpinner />
@@ -114,7 +117,7 @@ export const Config = ({language}) => {
       <div style={{ overflow: 'hidden'}}>
         
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
-          <MyCalendar bookings={bookings} />
+          <MyCalendar bookings={data} />
           <div style={{marginTop:70,height:600,width:200,display:'flex',flexDirection:'column',justifyContent:'space-around',textAlign:'center',alignItems:'center'}}>
             <div style={{borderRadius:10,borderStyle:'double',width:150,height:150,backgroundColor:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
               <div >

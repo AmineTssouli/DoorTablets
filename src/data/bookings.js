@@ -21,8 +21,8 @@ export const getBookings =  async (room) => {
         return booking;
       })
 
-   
+      bookings['happening'] = happening;
       
-    return bookings,happening;
+    return bookings;
 
 }
