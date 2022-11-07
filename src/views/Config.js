@@ -12,7 +12,6 @@ export const Config = ({language}) => {
   const [rooms,setRooms] =useState([])
   const [room,setRoom] = useState(0);
   const [choice,setChoice]=useState(false);
-  const [happening,SetHappening] = useState(false);
 
   const buildings = [
   {id:"46287",value:"Mukkulankatu 19 A 1. krs" },
@@ -90,14 +89,12 @@ export const Config = ({language}) => {
   }
   
   function MainView() {
-    const {isError, isLoading, data} = useQuery(
+    const {isError, isLoading, data:data,happening} = useQuery(
       ["bookings",room],
       ()=>getBookings(room),
       {staleTime:6000}
       );
-    SetHappening(data?.happening);
-    console.log(data?.happening);
-    console.log(happening);
+ 
   
     if(isLoading) {
       return <LoadingSpinner />
