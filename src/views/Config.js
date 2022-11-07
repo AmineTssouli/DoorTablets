@@ -95,7 +95,7 @@ export const Config = ({language}) => {
       ()=>getBookings(room),
       {staleTime:6000}
       );
-    SetHappening(data['happening']);
+    SetHappening(data?.happening);
   
     if(isLoading) {
       return <LoadingSpinner />
