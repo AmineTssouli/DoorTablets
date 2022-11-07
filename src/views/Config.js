@@ -89,7 +89,7 @@ export const Config = ({language}) => {
   }
   
   function MainView() {
-    const {isError, isLoading, data:bookings,happening} = useQuery(
+    const {isError, isLoading, data:[bookings,happening]} = useQuery(
       ["bookings",room],
       ()=>getBookings(room),
       {staleTime:6000}
