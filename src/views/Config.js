@@ -96,6 +96,8 @@ export const Config = ({language}) => {
       {staleTime:6000}
       );
     SetHappening(data?.happening);
+    console.log(data?.happening);
+    console.log(happening);
   
     if(isLoading) {
       return <LoadingSpinner />
