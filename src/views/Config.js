@@ -35,7 +35,7 @@ export const Config = ({language}) => {
   
 
 
-  const getRooms = useMemo(async ()=> {
+  useMemo(async ()=> {
       setRooms([])
       setRoom(0)
        if(building !== 0 || building ==="00000") {
