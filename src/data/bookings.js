@@ -5,15 +5,17 @@ export const getBookings =  async (room) => {
     // const response = await axios.get(`https://tilat.lab.fi/getReservations.php?room=${room}`);
     const bookings = response.data;
     let happening = 0;
+    let test = '';
     bookings.map((booking) => {
         booking.start = new Date(booking.start)
         booking.end = new Date(booking.end)
         let now = new Date();
-        (booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())? happening =1:happening=0;
-      
+        (booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())? happening = 1:happening = 0;
+        test =(booking.start.getTime() <= now.getTime() && booking.end.getTime() > now.getTime())
         return booking;
       })
-      console.log('happening ', happening)
+      
+      console.log('test ', test)
       bookings['happening'] = happening;
       
     return bookings;
